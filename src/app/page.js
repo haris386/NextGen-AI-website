@@ -3,6 +3,9 @@
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import IntroSection from "@/components/IntroSection";
+import WhyChooseUs from "@/components/WhyChooseUs";
+import EquipmentAndTechnology from "@/components/EquipmentAndTechnology";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -13,6 +16,15 @@ export default function Home() {
       </div>
       <div className="my-10">
         <IntroSection />
+      </div>
+      <div className="my-10">
+        <WhyChooseUs />
+      </div>
+      <div className="my-10">
+        <EquipmentAndTechnology />
+      </div>
+      <div className="my-5">
+        <Footer />
       </div>
     </main>
   );

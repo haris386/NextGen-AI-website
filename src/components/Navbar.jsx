@@ -6,7 +6,7 @@ import Image from "next/image";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const menuItems = ["Home", "Why Us", "Pricing", "Solutions", "Technology", "Contact"];
+  const menuItems = ["Home", "Why Us", "Pricing", "Equipment"];
 
   return (
     <nav className="w-full fixed top-0 left-0 z-50">

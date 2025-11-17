@@ -9,7 +9,7 @@ export default function IntroSection() {
       
       {/* Left Content */}
       <div className="flex-1">
-        <p className="font-semibold mb-[15px] leading-[1] text-[25px] md:text-[50px]">
+        <p className="font-[500] mb-[15px] leading-[1] text-[25px] md:text-[50px]">
           At Next Gen Payments, we believe in putting our client’s best interests first.
         </p>
 
@@ -21,7 +21,7 @@ export default function IntroSection() {
       {/* Right GIF */}
       <div className="flex-1 flex justify-center">
         <Image 
-          src="/images/a.jpg"
+          src="/images/SMOPF.png"
           alt="Illustration" 
           className="rounded-[20px]"
           width={400}
