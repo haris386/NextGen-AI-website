@@ -11,13 +11,13 @@ export default function Home() {
   return (
     <main className="relative">
       <Navbar />
-      <div className="pt-16 px-5">
+      <div>
         <HeroSection />
       </div>
-      <div className="my-10">
+      <div className="mt-20 mb-10">
         <IntroSection />
       </div>
-      <div className="my-10">
+      <div className="mb-10">
         <WhyChooseUs />
       </div>
       <div className="my-10">
