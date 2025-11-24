@@ -23,7 +23,7 @@ export default function Home() {
       <div className="my-10">
         <EquipmentAndTechnology />
       </div>
-      <div className="my-5">
+      <div className="mt-5">
         <Footer />
       </div>
     </main>

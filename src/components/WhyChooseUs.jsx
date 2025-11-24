@@ -1,6 +1,17 @@
 export default function WhyChooseUs() {
   return (
-    <section className="w-[90%] md:w-[80%] mx-auto mt-24 flex flex-col space-y-6 px-0 lg:px-6">
+    <section className="w-[90%] md:w-[80%] mx-auto mt-24 flex flex-col space-y-12 px-0 lg:px-6">
+      
+      {/* Section Heading */}
+      <div className="text-center space-y-4">
+        <h2 className="text-3xl md:text-5xl font-bold text-black">
+          Why Choose Us
+        </h2>
+        <p className="text-gray-600 text-base md:text-lg max-w-2xl mx-auto">
+          Discover the advantages our payment solutions bring to your business, from saving on processing fees to fully customized strategies.
+        </p>
+      </div>
+
       {/* Row 2: First set of cards */}
       <div className="flex flex-col md:flex-row md:space-x-6 space-y-6 md:space-y-0">
         {/* Left Card */}
@@ -9,11 +20,15 @@ export default function WhyChooseUs() {
           style={{background: '#f5f2fd' }}
         >
           <div className="flex-1 pr-4">
-            <h3 className="text-black font-[500] text-xl md:text-[40px] leading-[1] mb-[25px]">Save Money on Processing Fees</h3>
-            <p className="text-gray-600 text-sm md:text-[20px]">We partner with multiple providers to secure the best rates and help you save $$$$.</p>
+            <h3 className="text-black font-[500] text-xl md:text-[40px] leading-[1] mb-[25px]">
+              Save Money on Processing Fees
+            </h3>
+            <p className="text-gray-600 text-sm md:text-[20px]">
+              We partner with multiple providers to secure the best rates and help you save $$$$.
+            </p>
           </div>
           <div className="flex-1 h-full flex items-center justify-center">
-            <img src="/images/SM.gif" alt="Save Money" className="object-contain" style={{height:'200px'}} />
+            <img src="/images/SM.png" alt="Save Money" className="object-contain" style={{height:'260px'}} />
           </div>
         </div>
 
@@ -47,7 +62,9 @@ export default function WhyChooseUs() {
         >
           <div className="flex-1 pr-4">
             <h3 className="text-black font-[500] text-xl md:text-[40px] leading-[1] mb-[25px]">Pass Fees to Customers</h3>
-            <p className="text-gray-600 text-sm md:text-[20px]">If it's right for your business, we can show you how to legally pass credit card fees along to your customers.</p>
+            <p className="text-gray-600 text-sm md:text-[20px]">
+              If it's right for your business, we can show you how to legally pass credit card fees along to your customers.
+            </p>
           </div>
           <div className="flex-1 h-full flex items-center justify-center">
             <img src="/images/PFC.gif" alt="Pass Fees" className="object-contain" style={{height:'200px'}} />
