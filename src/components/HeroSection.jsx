@@ -13,7 +13,7 @@ export default function HeroSection() {
           {/* Left Column */}
           <div className="flex flex-col justify-center space-y-6">
             {/* Title Heading */}
-            <div className="space-y-3">
+            <div className="space-y-3 mt-[50px] lg:mt-0">
               <WritingText
                 className="font-bold text-foreground text-[50px] leading-[1.1] md:text-[100px]"
                 text="Next Gen Payments"
