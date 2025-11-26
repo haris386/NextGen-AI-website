@@ -1,28 +1,46 @@
 import { TbHierarchy3 } from "react-icons/tb";
 import { FaLayerGroup } from "react-icons/fa";
+import { WritingText } from "./ui/shadcn-io/writing-text";
+import { SplittingText } from "./ui/shadcn-io/splitting-text";
+import { motion } from "framer-motion";
 
 export default function WhyChooseUs() {
+  // Animation variants
+  const slideLeft = {
+    hidden: { opacity: 0, x: -100 },
+    visible: { opacity: 1, x: 0, transition: { duration: 1 } },
+  };
+
+  const slideRight = {
+    hidden: { opacity: 0, x: 100 },
+    visible: { opacity: 1, x: 0, transition: { duration: 1 } },
+  };
+
   return (
     <section className="w-[90%] md:w-[80%] mx-auto mt-24 flex flex-col space-y-12 px-0 lg:px-6">
       {/* Section Heading */}
-      <div className="text-center space-y-4">
-        <h2 className="text-3xl md:text-5xl font-bold text-black">
-          Why Choose Us
-        </h2>
-        <p className="text-gray-600 text-base md:text-lg max-w-2xl mx-auto">
-          Discover the advantages our payment solutions bring to your business,
-          from saving on processing fees to fully customized strategies.
-        </p>
+      <div className="flex flex-col text-center space-y-4">
+        <WritingText
+          className="text-3xl md:text-5xl font-bold text-black"
+          text="Why Choose Us"
+          spacing={9}
+        />
+        <SplittingText
+          text="Discover the advantages our payment solutions bring to your business, from saving on processing fees to fully customized strategies."
+          className="text-gray-600 text-base md:text-lg max-w-2xl mx-auto"
+        />
       </div>
 
       {/* Row 2 */}
       <div className="flex flex-col md:flex-row md:space-x-6 space-y-6 md:space-y-0">
-
         {/* Left Card */}
-        <div
-          className="flex-1 md:flex-[7] rounded-[20px] h-64 
-                     flex flex-col-reverse md:flex-row items-center p-6"
+        <motion.div
+          className="flex-1 md:flex-[7] rounded-[20px] h-64 flex flex-col-reverse md:flex-row items-center p-6"
           style={{ background: "#f5f2fd" }}
+          variants={slideLeft}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.5 }}
         >
           {/* TEXT */}
           <div className="flex-1 pr-0 md:pr-4 text-left mt-4 md:mt-0">
@@ -35,7 +53,7 @@ export default function WhyChooseUs() {
             </p>
           </div>
 
-          {/* IMAGE (TOP ON MOBILE) */}
+          {/* IMAGE */}
           <div className="flex-1 h-full flex items-center justify-center mb-4 md:mb-0">
             <img
               src="/images/SM.png"
@@ -44,10 +62,16 @@ export default function WhyChooseUs() {
               style={{ height: "260px" }}
             />
           </div>
-        </div>
+        </motion.div>
 
         {/* Right Card */}
-        <div className="flex-1 md:flex-[3] rounded-[20px] p-0 h-64 border-[4px] border-[#E7E7E7] flex flex-col overflow-hidden">
+        <motion.div
+          className="flex-1 md:flex-[3] rounded-[20px] p-0 h-64 border-[4px] border-[#E7E7E7] flex flex-col overflow-hidden"
+          variants={slideRight}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.5 }}
+        >
           <div className="w-full flex items-center justify-start pt-8 pl-4 pr-4">
             <TbHierarchy3 size={55} />
           </div>
@@ -59,14 +83,19 @@ export default function WhyChooseUs() {
               We analyze your business needs and build a tailored plan.
             </p>
           </div>
-        </div>
+        </motion.div>
       </div>
 
       {/* Row 3 */}
       <div className="flex flex-col md:flex-row md:space-x-6 space-y-6 md:space-y-0">
-
         {/* Left small card */}
-        <div className="flex-1 md:flex-[3] rounded-[20px] p-0 h-64 border-[4px] border-[#E7E7E7] flex flex-col overflow-hidden">
+        <motion.div
+          className="flex-1 md:flex-[3] rounded-[20px] p-0 h-64 border-[4px] border-[#E7E7E7] flex flex-col overflow-hidden"
+          variants={slideLeft}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.5 }}
+        >
           <div className="w-full flex items-center justify-start pt-10 pl-4 pr-4">
             <FaLayerGroup size={50} />
           </div>
@@ -79,13 +108,16 @@ export default function WhyChooseUs() {
               surcharging.
             </p>
           </div>
-        </div>
+        </motion.div>
 
         {/* Right Card */}
-        <div
-          className="flex-1 md:flex-[7] rounded-[20px] h-64 
-                     flex flex-col-reverse md:flex-row items-center p-6"
+        <motion.div
+          className="flex-1 md:flex-[7] rounded-[20px] h-64 flex flex-col-reverse md:flex-row items-center p-6"
           style={{ background: "#f5f2fd" }}
+          variants={slideRight}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.5 }}
         >
           {/* TEXT */}
           <div className="flex-1 pr-0 md:pr-4 text-left mt-4 md:mt-0">
@@ -98,7 +130,7 @@ export default function WhyChooseUs() {
             </p>
           </div>
 
-          {/* IMAGE (TOP ON MOBILE) */}
+          {/* IMAGE */}
           <div className="flex-1 h-full flex items-center justify-center mb-4 md:mb-0">
             <img
               src="/images/PFC.png"
@@ -107,7 +139,7 @@ export default function WhyChooseUs() {
               style={{ height: "260px" }}
             />
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
