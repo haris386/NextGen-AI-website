@@ -11,8 +11,8 @@ export default function IntroSection() {
       <div
         className="
           absolute 
-          top-[420px] left-[-15px]              /* MOBILE POSITION */
-          md:top-[-80px] md:left-0              /* DESKTOP ORIGINAL */
+          top-[420px] left-[-15px]              
+          md:top-[-80px] md:left-0              
           pointer-events-none select-none
         "
       >

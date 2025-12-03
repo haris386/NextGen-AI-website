@@ -6,12 +6,19 @@ import Image from "next/image";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const menuItems = ["Home", "Why Us", "Pricing", "Equipment"];
+
+  const menuItems = [
+    { name: "Home", id: "home" },
+    { name: "Our Advantages", id: "ouradvantages" },
+    { name: "Why Us", id: "whyus" },
+    { name: "Technology", id: "technology" },
+  ];
 
   return (
     <nav className="w-full bg-[#f5f2fd]">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 h-16 flex items-center justify-between">
-        {/* Left: Logo */}
+
+        {/* Logo */}
         <div className="flex items-center">
           <Image
             src="/logos/NextGen.png"
@@ -25,28 +32,29 @@ export default function Navbar() {
         {/* Desktop Menu */}
         <ul className="hidden md:flex justify-center space-x-8 text-black font-medium">
           {menuItems.map((item) => (
-            <li
-              key={item}
-              className="hover:text-primary cursor-pointer transition-colors"
-            >
-              {item}
+            <li key={item.id}>
+              <a
+                href={`#${item.id}`}
+                className="hover:text-primary cursor-pointer transition-colors"
+              >
+                {item.name}
+              </a>
             </li>
           ))}
         </ul>
 
         {/* Desktop CTA */}
         <div className="hidden md:flex justify-end">
-          <button className="px-5 py-2 rounded-full bg-black text-white font-medium shadow-sm hover:opacity-90 transition">
-            Try Now
-          </button>
+          <a href="#pricing">
+            <button className="px-5 py-2 rounded-full bg-black text-white font-medium shadow-sm hover:opacity-90 transition">
+              Try Now
+            </button>
+          </a>
         </div>
 
-        {/* Mobile Hamburger - Right Aligned */}
+        {/* Mobile Hamburger */}
         <div className="md:hidden flex justify-end">
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="text-gray-700 focus:outline-none"
-          >
+          <button onClick={() => setIsOpen(!isOpen)} className="text-gray-700">
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
@@ -57,19 +65,21 @@ export default function Navbar() {
         <div className="md:hidden bg-[#f5f2fd] w-full shadow-lg py-6">
           <ul className="flex flex-col items-center justify-center space-y-4 text-black font-medium">
             {menuItems.map((item) => (
-              <li
-                key={item}
-                className="hover:text-primary cursor-pointer transition-colors list-none"
-                onClick={() => setIsOpen(false)}
-              >
-                {item}
+              <li key={item.id} onClick={() => setIsOpen(false)}>
+                <a
+                  href={`#${item.id}`}
+                  className="hover:text-primary cursor-pointer transition-colors"
+                >
+                  {item.name}
+                </a>
               </li>
             ))}
 
-            {/* Mobile CTA */}
-            <button className="px-6 py-2 rounded-full bg-black text-white font-medium shadow-sm hover:opacity-90 transition">
-              Try Now
-            </button>
+            <a href="#pricing" onClick={() => setIsOpen(false)}>
+              <button className="px-6 py-2 rounded-full bg-black text-white font-medium shadow-sm hover:opacity-90 transition">
+                Try Now
+              </button>
+            </a>
           </ul>
         </div>
       )}

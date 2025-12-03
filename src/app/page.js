@@ -10,22 +10,28 @@ import Footer from "@/components/Footer";
 export default function Home() {
   return (
     <main className="relative">
-      <Navbar />
-      <div>
-        <HeroSection />
-      </div>
-      <div className="mt-20 mb-10">
-        <IntroSection />
-      </div>
-      <div className="mb-10">
-        <WhyChooseUs />
-      </div>
-      <div className="my-10">
-        <EquipmentAndTechnology />
-      </div>
-      <div className="mt-5">
-        <Footer />
-      </div>
-    </main>
+  <Navbar />
+
+  <div id="home">
+    <HeroSection />
+  </div>
+
+  <div id="ouradvantages" className="mt-20 mb-10">
+    <IntroSection />
+  </div>
+
+  <div id="whyus" className="mb-10">
+    <WhyChooseUs />
+  </div>
+
+  <div id="technology" className="my-10">
+    <EquipmentAndTechnology />
+  </div>
+
+  <div className="mt-5">
+    <Footer />
+  </div>
+</main>
+
   );
 }

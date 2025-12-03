@@ -28,28 +28,14 @@ export default function Footer() {
           {/* Quick Links Column */}
           <div className="md:w-1/5 text-left space-y-3">
             <h3 className="text-black font-semibold text-lg">Quick Links</h3>
-            <ul className="flex flex-col space-y-4 text-gray-700 text-base">
-              <li>
-                <a href="#" className="hover:underline">
-                  Home
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:underline">
-                  Why Us
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:underline">
-                  Pricing
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:underline">
-                  Equipment
-                </a>
-              </li>
-            </ul>
+           <ul className="flex flex-col space-y-4 text-gray-700 text-base">
+  <li><a href="#home" className="hover:underline">Home</a></li>
+  <li><a href="#ouradvantages" className="hover:underline">Our Advantages</a></li>
+  <li><a href="#whyus" className="hover:underline">Why Us</a></li>
+  <li><a href="#technology" className="hover:underline">Technology</a></li>
+</ul>
+
+
           </div>
 
           {/* Contact Column */}
