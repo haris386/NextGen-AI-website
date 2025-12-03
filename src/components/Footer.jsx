@@ -13,7 +13,7 @@ export default function Footer({setFormOpen}) {
           {/* Left Column - Logo */}
           <div className="md:w-2/5 flex flex-col items-center md:items-start space-y-4">
             <img
-              src="/logos/NextGen.png"
+              src="/logos/NextGenG.png"
               alt="Logo"
               style={{ height: "80px", objectFit: "contain" }}
             />

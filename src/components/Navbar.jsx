@@ -20,10 +20,10 @@ export default function Navbar({ setFormOpen }) {
         {/* Logo */}
         <div className="flex items-center">
           <Image
-            src="/logos/NextGen.png"
+            src="/logos/NextGenG.png"
             alt="NextGen Logo"
-            width={200}   // increased width
-            height={70}   // increased height
+            width={200}   
+            height={70}   
             priority
           />
         </div>

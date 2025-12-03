@@ -31,7 +31,7 @@ export default function EquipmentAndTechnology() {
   return (
     <motion.section
       className="w-[90%] md:w-[80%] mx-auto rounded-[35px] mt-24 p-8 md:p-16"
-      style={{ backgroundColor: "#fbeaf0" }}
+      style={{ backgroundColor: "#bbea7c" }}
       variants={slideUp}
       initial="hidden"
       whileInView="visible"

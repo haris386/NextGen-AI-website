@@ -41,7 +41,7 @@ export default function HeroSection({setFormOpen, setVideoOpen}) {
               {/* Video Button */}
               <button onClick={() => setVideoOpen(true)} className="flex items-center gap-3 px-2 sm:px-2 text-black font-[500]">
                 <span className="w-[60px] h-[60px] flex items-center justify-center border-2 bg-[#f5f2fd] border-black rounded-full">
-                  <span className="w-10 h-10 flex items-center justify-center bg-[#ffb1a4] rounded-full">
+                  <span className="w-10 h-10 flex items-center justify-center bg-[#8cc53f] rounded-full">
                     <img
                       src="/icons/play.gif"
                       alt=""
@@ -58,7 +58,7 @@ export default function HeroSection({setFormOpen, setVideoOpen}) {
           {/* Right Column Image */}
           <div className="flex justify-end h-[400px] sm:h-[500px] lg:h-[600px]">
             <Image
-              src="/images/hero-rightSide.png"
+              src="/images/hero-rightSideG.png"
               alt="Hero Right Side"
               width={600}
               height={600}
