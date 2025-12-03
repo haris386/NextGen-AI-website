@@ -4,7 +4,7 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import Image from "next/image";
 
-export default function Navbar() {
+export default function Navbar({ setFormOpen }) {
   const [isOpen, setIsOpen] = useState(false);
 
   const menuItems = [
@@ -17,26 +17,16 @@ export default function Navbar() {
   return (
     <nav className="w-full bg-[#f5f2fd]">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 h-16 flex items-center justify-between">
-
         {/* Logo */}
         <div className="flex items-center">
-          <Image
-            src="/logos/NextGen.png"
-            alt="NextGen Logo"
-            width={150}
-            height={50}
-            priority
-          />
+          <Image src="/logos/NextGen.png" alt="NextGen Logo" width={150} height={50} priority />
         </div>
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex justify-center space-x-8 text-black font-medium">
           {menuItems.map((item) => (
             <li key={item.id}>
-              <a
-                href={`#${item.id}`}
-                className="hover:text-primary cursor-pointer transition-colors"
-              >
+              <a href={`#${item.id}`} className="hover:text-primary cursor-pointer transition-colors">
                 {item.name}
               </a>
             </li>
@@ -45,11 +35,12 @@ export default function Navbar() {
 
         {/* Desktop CTA */}
         <div className="hidden md:flex justify-end">
-          <a href="#pricing">
-            <button className="px-5 py-2 rounded-full bg-black text-white font-medium shadow-sm hover:opacity-90 transition">
-              Try Now
-            </button>
-          </a>
+          <button
+            onClick={() => setFormOpen(true)}
+            className="px-5 py-2 rounded-full bg-black text-white font-medium shadow-sm hover:opacity-90 transition"
+          >
+            Try Now
+          </button>
         </div>
 
         {/* Mobile Hamburger */}
@@ -66,20 +57,22 @@ export default function Navbar() {
           <ul className="flex flex-col items-center justify-center space-y-4 text-black font-medium">
             {menuItems.map((item) => (
               <li key={item.id} onClick={() => setIsOpen(false)}>
-                <a
-                  href={`#${item.id}`}
-                  className="hover:text-primary cursor-pointer transition-colors"
-                >
+                <a href={`#${item.id}`} className="hover:text-primary cursor-pointer transition-colors">
                   {item.name}
                 </a>
               </li>
             ))}
-
-            <a href="#pricing" onClick={() => setIsOpen(false)}>
-              <button className="px-6 py-2 rounded-full bg-black text-white font-medium shadow-sm hover:opacity-90 transition">
+            <li>
+              <button
+                onClick={() => {
+                  setFormOpen(true);
+                  setIsOpen(false);
+                }}
+                className="px-6 py-2 rounded-full bg-black text-white font-medium shadow-sm hover:opacity-90 transition"
+              >
                 Try Now
               </button>
-            </a>
+            </li>
           </ul>
         </div>
       )}

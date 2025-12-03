@@ -5,7 +5,7 @@ import { FaPlay } from "react-icons/fa";
 import { WritingText } from "@/components/ui/shadcn-io/writing-text";
 import { SplittingText } from "./ui/shadcn-io/splitting-text";
 
-export default function HeroSection() {
+export default function HeroSection({setFormOpen, setVideoOpen}) {
   return (
     <section className="w-full min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 bg-[#f5f2fd]">
       <div className="w-full max-w-7xl mx-auto">
@@ -34,12 +34,12 @@ export default function HeroSection() {
             {/* Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
               {/* Get Started Button */}
-              <button className="px-6 sm:px-8 py-3 bg-primary text-primary-foreground font-[500] rounded-full hover:opacity-90 transition-opacity">
+              <button onClick={() => setFormOpen(true)} className="px-6 sm:px-8 py-3 bg-primary text-primary-foreground font-[500] rounded-full hover:opacity-90 transition-opacity">
                 Get Started
               </button>
 
               {/* Video Button */}
-              <button className="flex items-center gap-3 px-2 sm:px-2 text-black font-[500]">
+              <button onClick={() => setVideoOpen(true)} className="flex items-center gap-3 px-2 sm:px-2 text-black font-[500]">
                 <span className="w-[60px] h-[60px] flex items-center justify-center border-2 bg-[#f5f2fd] border-black rounded-full">
                   <span className="w-10 h-10 flex items-center justify-center bg-[#ffb1a4] rounded-full">
                     <img

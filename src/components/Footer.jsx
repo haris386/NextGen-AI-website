@@ -4,7 +4,7 @@ import {
   TiSocialLinkedin,
 } from "react-icons/ti";
 
-export default function Footer() {
+export default function Footer({setFormOpen}) {
   return (
     <>
       {/* Footer 1 */}
@@ -95,7 +95,7 @@ export default function Footer() {
           </p>
 
           {/* Right Button */}
-          <button className="px-6 sm:px-8 py-3 bg-primary text-primary-foreground font-[500] rounded-full hover:opacity-90 transition-opacity">
+          <button onClick={() => setFormOpen(true)} className="px-6 sm:px-8 py-3 bg-primary text-primary-foreground font-[500] rounded-full hover:opacity-90 transition-opacity">
             Contact Us
           </button>
         </div>
