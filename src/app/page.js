@@ -17,16 +17,16 @@ export default function Home() {
   return (
     <main className="relative">
       <Navbar setFormOpen={setFormOpen} />
-      <div>
-        <HeroSection setFormOpen={setFormOpen} setVideoOpen={setVideoOpen} />
+      <div id="home">
+        <HeroSection  setFormOpen={setFormOpen} setVideoOpen={setVideoOpen} />
       </div>
-      <div className="mt-20 mb-10">
+      <div id="ouradvantages" className="mt-20 mb-10">
         <IntroSection />
       </div>
-      <div className="mb-10">
+      <div id="whyus" className="mb-10">
         <WhyChooseUs />
       </div>
-      <div className="my-10">
+      <div id="technology" className="my-10">
         <EquipmentAndTechnology />
       </div>
       <div className="mt-5">

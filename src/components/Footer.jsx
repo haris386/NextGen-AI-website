@@ -4,7 +4,7 @@ import {
   TiSocialLinkedin,
 } from "react-icons/ti";
 
-export default function Footer({setFormOpen}) {
+export default function Footer({ setFormOpen }) {
   return (
     <>
       {/* Footer 1 */}
@@ -21,31 +21,29 @@ export default function Footer({setFormOpen}) {
               Payment processing done the right way!
             </p>
             <p className="text-gray-700 text-base text-center md:text-left">
-              8910 W 192nd St. Unit P, ABC, ABC 00011
+              8910 W. 192nd St. Unit M Mokena
             </p>
           </div>
 
           {/* Quick Links Column */}
           <div className="md:w-1/5 text-left space-y-3">
             <h3 className="text-black font-semibold text-lg">Quick Links</h3>
-           <ul className="flex flex-col space-y-4 text-gray-700 text-base">
-  <li><a href="#home" className="hover:underline">Home</a></li>
-  <li><a href="#ouradvantages" className="hover:underline">Our Advantages</a></li>
-  <li><a href="#whyus" className="hover:underline">Why Us</a></li>
-  <li><a href="#technology" className="hover:underline">Technology</a></li>
-</ul>
-
-
+            <ul className="flex flex-col space-y-4 text-gray-700 text-base">
+              <li><a href="#home" className="hover:underline">Home</a></li>
+              <li><a href="#ouradvantages" className="hover:underline">Our Advantages</a></li>
+              <li><a href="#whyus" className="hover:underline">Why Us</a></li>
+              <li><a href="#technology" className="hover:underline">Technology</a></li>
+            </ul>
           </div>
 
           {/* Contact Column */}
           <div className="md:w-1/5 text-left space-y-2">
             <h3 className="text-black font-semibold text-lg">Contact Us</h3>
             <p className="text-gray-700 text-base space-y-4">
-              Phone: (123) 456-7890
+              Phone: 833-400-NEXT (6398)
             </p>
             <p className="text-gray-700 text-base space-y-4">
-              Email: info@example.com
+              Email: <a href="mailto:info@nextgpayment.com" className="hover:underline">info@nextgpayment.com</a>
             </p>
           </div>
 
@@ -95,7 +93,10 @@ export default function Footer({setFormOpen}) {
           </p>
 
           {/* Right Button */}
-          <button onClick={() => setFormOpen(true)} className="px-6 sm:px-8 py-3 bg-primary text-primary-foreground font-[500] rounded-full hover:opacity-90 transition-opacity">
+          <button
+            onClick={() => setFormOpen(true)}
+            className="px-6 sm:px-8 py-3 bg-primary text-primary-foreground font-[500] rounded-full hover:opacity-90 transition-opacity"
+          >
             Contact Us
           </button>
         </div>
@@ -106,12 +107,10 @@ export default function Footer({setFormOpen}) {
         <div className="flex flex-col md:flex-row justify-between items-center space-y-2 md:space-y-0">
           <p>All rights reserved NextGen @ 2025</p>
           <div className="flex items-center space-x-4">
-            <a href="#" className="hover:underline">
-              Terms & Conditions
+            <a href="#terms" className="hover:underline">Terms & Conditions
             </a>
             <span>|</span>
-            <a href="#" className="hover:underline">
-              Privacy Policy
+            <a href="#privacy" className="hover:underline">Privacy Policy
             </a>
           </div>
         </div>
