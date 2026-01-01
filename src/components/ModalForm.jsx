@@ -81,8 +81,8 @@ export default function ModalForm({ isOpen, setIsOpen }) {
           {/* Submit */}
           <button
             type="submit"
-            className="w-full text-white font-bold py-3 rounded-full transition-colors duration-300 shadow-md"
-            style={{ backgroundColor: "black", fontSize: "15px" }}
+            className="w-full bg-[#bbea7c] text-black font-bold py-3 rounded-full transition-colors duration-300 shadow-md"
+            style={{ fontSize: "15px" }}
           >
             Submit
           </button>

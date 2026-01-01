@@ -34,12 +34,12 @@ export default function HeroSection({setFormOpen, setVideoOpen}) {
             {/* Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
               {/* Get Started Button */}
-              <button onClick={() => setFormOpen(true)} className="px-6 sm:px-8 py-3 bg-primary text-primary-foreground font-[500] rounded-full hover:opacity-90 transition-opacity">
+              <button onClick={() => setFormOpen(true)} className="bg-[#bbea7c] px-6 sm:px-8 py-3 text-[black] font-[500] rounded-full hover:opacity-90 transition-opacity">
                 Get Started
               </button>
 
               {/* Video Button */}
-              <button onClick={() => setVideoOpen(true)} className="flex items-center gap-3 px-2 sm:px-2 text-black font-[500]">
+              {/* <button onClick={() => setVideoOpen(true)} className="flex items-center gap-3 px-2 sm:px-2 text-black font-[500]">
                 <span className="w-[60px] h-[60px] flex items-center justify-center border-2 bg-[#f5f2fd] border-black rounded-full">
                   <span className="w-10 h-10 flex items-center justify-center bg-[#8cc53f] rounded-full">
                     <img
@@ -47,11 +47,10 @@ export default function HeroSection({setFormOpen, setVideoOpen}) {
                       alt=""
                       style={{ height: "30px" }}
                     />
-                    {/* <FaPlay size={16} /> */}
                   </span>
                 </span>
                 See How It Works
-              </button>
+              </button> */}
             </div>
           </div>
 

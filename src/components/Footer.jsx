@@ -95,7 +95,7 @@ export default function Footer({ setFormOpen }) {
           {/* Right Button */}
           <button
             onClick={() => setFormOpen(true)}
-            className="px-6 sm:px-8 py-3 bg-primary text-primary-foreground font-[500] rounded-full hover:opacity-90 transition-opacity"
+            className="px-6 sm:px-8 py-3 bg-[#bbea7c] text-black font-[500] rounded-full hover:opacity-90 transition-opacity"
           >
             Contact Us
           </button>

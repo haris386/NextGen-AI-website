@@ -46,7 +46,7 @@ export default function Navbar({ setFormOpen }) {
         <div className="hidden md:flex justify-end">
           <button
             onClick={() => setFormOpen(true)}
-            className="px-6 py-3 rounded-full bg-black text-white font-medium shadow-sm hover:opacity-90 transition"
+            className="px-6 py-3 rounded-full bg-[#bbea7c] text-black font-medium shadow-sm hover:opacity-90 transition"
           >
             Try Now
           </button>
@@ -80,7 +80,7 @@ export default function Navbar({ setFormOpen }) {
                   setFormOpen(true);
                   setIsOpen(false);
                 }}
-                className="px-6 py-2 rounded-full bg-black text-white font-medium shadow-sm hover:opacity-90 transition"
+                className="px-6 py-2 rounded-full bg-[#bbea7c] text-black font-medium shadow-sm hover:opacity-90 transition"
               >
                 Try Now
               </button>
